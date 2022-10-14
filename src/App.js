@@ -21,11 +21,11 @@ function App() {
     const newTodos = todos.sort((todo) => {
       return todo.id !== id;
     });
+    setTodos((todos) => todos.filter((todo) => todo.id !== id));
   }
 
   function addTodo(todo) {
     setTodos([...todos, todo]);
-    console.log(todos);
   }
 
   const { colorMode, toggleColorMode } = useColorMode();
